@@ -5,40 +5,55 @@
     ViewData["Title"] = "Details";
 }
 
+<a asp-page="./Index" class="govuk-back-link">Back</a>
+
+<span style="display:block; height: 30px;"></span>
+
 <h1 class="govuk-heading-xl">Details</h1>
 
-<a asp-page="./Index" class="govuk-back-link">Back</a>
+
 
 
 <div>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LogAppeal.FirstName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LogAppeal.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LogAppeal.LastName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LogAppeal.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LogAppeal.Nationality)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LogAppeal.Nationality)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.LogAppeal.DateOfBirth)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.LogAppeal.DateOfBirth)
-        </dd>
-    </dl>
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                @Html.DisplayNameFor(model => model.LogAppeal.FirstName)
+            </dt>
+            <dd class="govuk-summary-list__value">
+                @Html.DisplayFor(model => model.LogAppeal.FirstName)
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                @Html.DisplayNameFor(model => model.LogAppeal.LastName)
+            </dt>
+            <dd class="govuk-summary-list__value">
+                @Html.DisplayFor(model => model.LogAppeal.LastName)
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                @Html.DisplayNameFor(model => model.LogAppeal.Nationality)
+            </dt>
+            <dd class="govuk-summary-list__value">
+                @Html.DisplayFor(model => model.LogAppeal.Nationality)
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                @Html.DisplayNameFor(model => model.LogAppeal.DateOfBirth)
+            </dt>
+            <dd class="govuk-summary-list__value">
+                @Html.DisplayFor(model => model.LogAppeal.DateOfBirth)
+            </dd>
+        </div>
+
+    </dl>   
 </div>
 <div>
     <a asp-page="./Edit" class="govuk-back-link" asp-route-id="@Model.LogAppeal.ID">Edit</a>
 </div>
+
+<span style="display:block; height: 92px;"></span>

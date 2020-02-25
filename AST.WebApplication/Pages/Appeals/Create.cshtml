@@ -2,47 +2,46 @@
 @model AST.WebApplication.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Log New Appeal";
 }
 
-<h1>Create</h1>
+<h1 class="govuk-heading-xl">Log New Appeal</h1>
 
-<h4>LogAppeal</h4>
+<a asp-page="/Index" class="govuk-back-link">Back</a>
+
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="LogAppeal.FirstName" class="control-label"></label>
-                <input asp-for="LogAppeal.FirstName" class="form-control" />
+                <label asp-for="LogAppeal.FirstName" class="govuk-label"></label>
+                <input asp-for="LogAppeal.FirstName" class="form-control" placeholder="Jane" />
                 <span asp-validation-for="LogAppeal.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LogAppeal.LastName" class="control-label"></label>
-                <input asp-for="LogAppeal.LastName" class="form-control" />
+                <label asp-for="LogAppeal.LastName" class="govuk-label"></label>
+                <input asp-for="LogAppeal.LastName" class="form-control" placeholder="Doe"/>
                 <span asp-validation-for="LogAppeal.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LogAppeal.Nationality" class="control-label"></label>
-                <input asp-for="LogAppeal.Nationality" class="form-control" />
+                <label asp-for="LogAppeal.Nationality" class="govuk-label"></label>
+                <input asp-for="LogAppeal.Nationality" class="form-control" placeholder="British"/>
                 <span asp-validation-for="LogAppeal.Nationality" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LogAppeal.DateOfBirth" class="control-label"></label>
+                <label asp-for="LogAppeal.DateOfBirth" class="govuk-label"></label>
                 <input asp-for="LogAppeal.DateOfBirth" class="form-control" />
                 <span asp-validation-for="LogAppeal.DateOfBirth" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">Submit</button>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

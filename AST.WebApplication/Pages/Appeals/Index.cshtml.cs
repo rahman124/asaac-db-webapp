@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AST.WebApplication.Data;
 using RazorPagesAppeals.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AST.WebApplication
 {
@@ -20,6 +21,13 @@ namespace AST.WebApplication
         }
 
         public IList<LogAppeal> LogAppeal { get;set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
+        public SelectList Genres { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string MovieGenre { get; set; }
 
         public async Task OnGetAsync()
         {
