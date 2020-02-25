@@ -1,0 +1,44 @@
+﻿@page
+@model AST.WebApplication.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="govuk-heading-xl">Details</h1>
+
+<a asp-page="./Index" class="govuk-back-link">Back</a>
+
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAppeal.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogAppeal.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAppeal.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogAppeal.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAppeal.Nationality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogAppeal.Nationality)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAppeal.DateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LogAppeal.DateOfBirth)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" class="govuk-back-link" asp-route-id="@Model.LogAppeal.ID">Edit</a>
+</div>

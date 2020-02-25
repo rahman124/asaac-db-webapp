@@ -53,14 +53,14 @@
                 <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
                 <nav>
                     <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-                        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-                            <a class="govuk-header__link" href="#1">
-                                Navigation item 1
+                        <li class="govuk-header__navigation-item">
+                            <a asp-area="" class="govuk-header__link" asp-page="/Appeals/Create">
+                                Log New Appeal
                             </a>
                         </li>
                         <li class="govuk-header__navigation-item">
-                            <a class="govuk-header__link" href="#2">
-                                Navigation item 2
+                            <a asp-area="" class="govuk-header__link" asp-page="/Appeals/Index">
+                                View Appeals
                             </a>
                         </li>
                         <li class="govuk-header__navigation-item">
@@ -86,9 +86,6 @@
             </p>
         </div>
 
-        <a asp-area="" class="govuk-back-link" asp-page="/Index">
-        Back
-        </a>
 
         <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
        

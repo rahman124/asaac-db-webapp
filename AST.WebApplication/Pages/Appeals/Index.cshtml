@@ -1,0 +1,59 @@
+﻿@page
+@model AST.WebApplication.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Appeals</h1>
+    </div>
+</div>
+
+<span style="display:block; height: 50px;"></span>
+
+
+<table class="govuk-table">
+    <thead class="govuk-table__header">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+                @Html.DisplayNameFor(model => model.LogAppeal[0].FirstName)
+            </th>
+            <th scope="col" class="govuk-table__header">
+                @Html.DisplayNameFor(model => model.LogAppeal[0].LastName)
+            </th>
+            <th scope="col" class="govuk-table__header">
+                @Html.DisplayNameFor(model => model.LogAppeal[0].Nationality)
+            </th>
+            <th scope="col" class="govuk-table__header">
+                @Html.DisplayNameFor(model => model.LogAppeal[0].DateOfBirth)
+            </th>
+            <th scope="col" class="govuk-table__header"></th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        @foreach (var item in Model.LogAppeal)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nationality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td class="govuk-table__cell">
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
