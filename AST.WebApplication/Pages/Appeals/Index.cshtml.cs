@@ -27,7 +27,7 @@ namespace AST.WebApplication
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
         public SelectList Genres { get; set; }
         [BindProperty(SupportsGet = true)]
-        public string MovieGenre { get; set; }
+        public string AppealType { get; set; }
 
         public async Task OnGetAsync()
         {
